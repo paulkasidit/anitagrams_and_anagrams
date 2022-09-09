@@ -19,8 +19,14 @@ class Analyzer
   #   end
   # end
 
-  def is_anagram #output value: boolean
-  end
+  # def is_anagram(string1, string2) #output value: boolean
+  #   for i in string1 
+  #     for j in string2 
+  #       if i = j 
+  #         return true 
+  #       else
+  #         return false 
+  # end
 
   def is_antigram #output value: boolean
   end 
