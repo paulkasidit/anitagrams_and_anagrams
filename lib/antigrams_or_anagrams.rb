@@ -57,7 +57,7 @@ class Analyzer
     processing_array = []
     string_object.each_char {|letter| 
       processing_array.push(letter)}
-    formatted_array = processing_array.sort() - [" ", "!", "?", ".", nil]
+    formatted_array = processing_array.sort() - [" ", "!", "?", ".",",", nil]
   end 
 
 
