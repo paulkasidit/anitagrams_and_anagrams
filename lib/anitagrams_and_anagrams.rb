@@ -25,15 +25,12 @@ class Analyzer
     else
       return false 
   end
-
-  # def is_antigram #output value: boolean
   # end 
 
   def format_string(string_object)
 
     processing_array = []
     string_object.each_char {|letter| 
-      letter
       processing_array.push(letter)
     }
 
