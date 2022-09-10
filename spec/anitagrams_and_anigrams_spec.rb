@@ -40,13 +40,13 @@ describe Analyzer do
   describe('.format_string') do 
     it ("returns string input (sentence) as a sorted array of individual letters with spaces removed") do 
       first_analysis =  Analyzer.new("Cats are cool","Dog") 
-      expect(first_analysis.format_string('hello me')).to(eq(["e", "e", "h", "l", "l", "m", "o"]))#Cat
+      expect(first_analysis.format_string('hello me')).to(eq(["e", "e", "h", "l", "l", "m", "o"]))
     end
   end
   describe('.format_string') do 
     it ("returns string input (sentence) as a sorted array of individual letters with spaces removed") do 
       first_analysis =  Analyzer.new("Cats are cool","Dog") 
-      expect(first_analysis.format_string('hello me!')).to(eq(["e", "e", "h", "l", "l", "m", "o"]))#Cat
+      expect(first_analysis.format_string('hello me!')).to(eq(["e", "e", "h", "l", "l", "m", "o"]))
     end
   end
 
