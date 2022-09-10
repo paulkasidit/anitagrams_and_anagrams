@@ -6,7 +6,7 @@
 
 ## Technologies Used
 
-* Ruby
+* Ruby 
 * Rails 
 * Rspec
 
