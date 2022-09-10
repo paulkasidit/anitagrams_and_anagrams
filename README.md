@@ -28,7 +28,7 @@ git clone https://github.com/paulkasidit/epicodus_week1_ruby_pt
 
 Run scripts in the project's root directory with the following terminal command
 ``` 
-ruby antigrams_or_anagrams.rspec
+ruby antigrams_or_anagrams.rb
 ``` 
 
 Run tests for all scripts in the project's root directory with following terminal command
