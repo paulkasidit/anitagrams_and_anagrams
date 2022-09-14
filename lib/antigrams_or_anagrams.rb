@@ -7,7 +7,7 @@ class Analyzer
     @string_2 = string_2.downcase()
   end
 
-  def anagram_or_antigram() #intiialzie is_anigram & is_antigram  as callback functions  
+  def anagram_or_antigram() 
     if is_word(string_1) == true  && is_word(string_2) == true 
       formatted_string_1 = format_string(string_1) 
       formatted_string_2 = format_string(string_2) 
@@ -29,7 +29,7 @@ class Analyzer
     end
   end
 
-  def is_anagram(formatted_array_1, formatted_array_2) #output value: boolean
+  def is_anagram(formatted_array_1, formatted_array_2) 
     if formatted_array_1 == formatted_array_2
       return true 
     else

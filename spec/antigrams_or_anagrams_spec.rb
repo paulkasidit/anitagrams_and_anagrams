@@ -2,45 +2,45 @@ require('rspec')
 require('antigrams_or_anagrams') 
 
 describe Analyzer do 
-    #intialize
+
     describe('.intialize') do
-      it("returns first word as string") do #Luxy 
+      it("returns first word as string") do  
         first_analysis =  Analyzer.new("Lucy","Bob")
         expect(first_analysis.string_1.class).to(eq(String))
       end
     end
     describe('.intialize') do
-      it("returns first sentence as string") do #Luxy 
+      it("returns first sentence as string") do 
         first_analysis =  Analyzer.new("Lucy is cool","Bob")
         expect(first_analysis.string_1.class).to(eq(String))
       end
     end
     describe('.intialize') do
-      it("returns first sentence as lowercase string") do #Luxy 
+      it("returns first sentence as lowercase string") do 
         first_analysis =  Analyzer.new("Lucy is cool","Bob")
         expect(first_analysis.string_1).to(eq('lucy is cool'))
       end
     end
   
-  #is_word - helper function to check if input is an actual word 
+
   describe('.is_word') do 
     it ("returns boolean if input contains a vowel") do 
       first_analysis =  Analyzer.new("Cat","Dog") 
-      expect(first_analysis.is_word('Cat')).to(eq(true))#Cat
+      expect(first_analysis.is_word('Cat')).to(eq(true))
     end
   end
   describe('.is_word') do 
     it ("returns boolean if input contains a vowel") do 
       first_analysis =  Analyzer.new("Cat","Dog") 
-      expect(first_analysis.is_word('xxyz')).to(eq(false))#Cat
+      expect(first_analysis.is_word('xxz')).to(eq(false))
     end
   end
 
-  #format_string - helper function to help format string (removing punctuation, whitespaces, etc.)
+
   describe('.format_string') do 
     it ("returns string input (word) as a sorted array of individual letters") do 
       first_analysis =  Analyzer.new("Cat","Dog") 
-      expect(first_analysis.format_string('cat')).to(eq(["a","c","t"]))#Cat
+      expect(first_analysis.format_string('cat')).to(eq(["a","c","t"]))
     end
   end
   describe('.format_string') do 
@@ -56,46 +56,42 @@ describe Analyzer do
     end
   end
 
-  #is_anagram 
+
   describe('.is_anagram') do 
     it ("returns true if arrays DO match") do 
       first_analysis =  Analyzer.new("Cat","Dog") 
-      expect(first_analysis.is_anagram(['d','g','o'],['d','g','o'])).to(eq(true))#God, Dog 
+      expect(first_analysis.is_anagram(['d','g','o'],['d','g','o'])).to(eq(true))
     end
   end
   describe('.is_anagram') do 
     it ("returns false if arrays DO NOT match") do 
       first_analysis =  Analyzer.new("Cat","Dog") 
-      expect(first_analysis.is_anagram(['d','g','o'],['a','c','t'])).to(eq(false))#Dog, Cat 
+      expect(first_analysis.is_anagram(['d','g','o'],['a','c','t'])).to(eq(false))
     end
   end
-  
-  #is_antigram 
+
   describe('.is_antigram') do 
     it ("returns false if the two arrays have ATLEAST one matching letter") do 
       first_analysis =  Analyzer.new("Cat","Dog") 
-      expect(first_analysis.is_antigram(['x','y','z'],['a','b','c'])).to(eq(true))#Xyz, Abc 
+      expect(first_analysis.is_antigram(['x','y','z'],['a','b','c'])).to(eq(true))
     end
   end 
   describe('.is_antigram') do 
-    #"returns true if the two arrays have ZERO matching letters"
     it ("returns true if the two arrays have ZERO matching letters") do 
       first_analysis =  Analyzer.new("Cat","Dog") 
-      expect(first_analysis.is_antigram(['h','i'],['b','e','y'])).to(eq(true))#Hi, Bye
+      expect(first_analysis.is_antigram(['h','i'],['b','e','y'])).to(eq(true))
     end
   end
   describe('.is_antigram') do 
-    #"returns true if the two arrays have ZERO matching letters"
     it ("returns false if the two arrays have AT LEAST one matching letter") do 
       first_analysis =  Analyzer.new("Cat","Dog") 
-      expect(first_analysis.is_antigram(['a','e','r'],['a','e','r'])).to(eq(false))#Ear, Are 
+      expect(first_analysis.is_antigram(['a','e','r'],['a','e','r'])).to(eq(false))
     end
   end
   describe('.is_antigram') do 
-    #"returns true if the two arrays have ZERO matching letters"
     it ("returns false if the two arrays have AT LEAST one matching letter") do 
       first_analysis =  Analyzer.new("Cat","Dog") 
-      expect(first_analysis.is_antigram(['a','c','t'],['a','h','t'])).to(eq(false))#Cat, Hat 
+      expect(first_analysis.is_antigram(['a','c','t'],['a','h','t'])).to(eq(false))
     end
   end
 
