@@ -1,5 +1,5 @@
 require('rspec')  
-require('lib/') 
+require('antigrams_or_anagrams') 
 
 puts "\n"
 puts "Hey there, please enter two words for antigram/anagram analysis on the prompt"
