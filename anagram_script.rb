@@ -1,5 +1,5 @@
-require('rspec')  
-require('antigrams_or_anagrams') 
+require('rspec') 
+require('./lib/antigrams_or_anagrams.rb') 
 
 puts "\n"
 puts "Hey there, please enter two words for antigram/anagram analysis on the prompt"
